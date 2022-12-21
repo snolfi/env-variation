@@ -1,5 +1,3 @@
-# The Role of Environmental Variations in
-Evolutionary Robotics: Instructions for replicating the experiments
 # env-variations
 Replicating the experiments described in the paper "The Role of Environmental Variations in Evolutionary Robotics"
 
