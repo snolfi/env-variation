@@ -16,20 +16,27 @@ To set the distribution of the perturbations affecting the motor states to a giv
 in the file ./bin/policy.py after line 200
  
 To set the distribution of action perturbation to a value which increase during evaluation episode up to a certain maxvalue add the instruction:
-"nrange = 0.01" 
-in the file policy.py after the line 205
-and the instructions:
-  self.nn.setnoiserange(nrange)
-  nrange += maxvalue/1000
+
+        nrange = 0.01 
+
+in the file policy.py after the line 205 and the instructions:
+
+        self.nn.setnoiserange(nrange)
+	nrange += maxvalue/1000
+	
 in the same file after line 206
  
 To set the distribution of action perturbations to a value which increase across generations up to a certain maxvalue add the instruction:
-  self.policy.nn.setnoiserange((self.steps/self.maxsteps)*maxvalue) 
+
+        self.policy.nn.setnoiserange((self.steps/self.maxsteps)*maxvalue) 
+
 In the file ./bin/openai-es.py after line 218.
  
 To set the distribution of action perturbations to a value during post-evaluation tests specify a number of post-evaluation episodes greater than 1 and add the following instruction:
+
 	if (ntrials > 1)
 		self.nn.setnoiserange(value)
+
 in the file ./bin/policy.py after line 205.
 
 
