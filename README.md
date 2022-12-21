@@ -9,12 +9,14 @@ To learn to use evorobotpy see the Chapter 13 of the open-access book [Behaviora
 
 Please replace the original file contained in the /evorobotpy2/lib folder with the files contained in this repository and recompile the evo module by following the instructions included in Section 13.5 of the book.  
 
-To set the distribution of the perturbations affecting the motor states to a given fixed value add the instruction: 
-  self.nn.setnoiserange(value)
+To set the distribution of the perturbations affecting the motor states to a given fixed value add the instruction:
+
+self.nn.setnoiserange(value) 
+
 in the file ./bin/policy.py after line 200
  
 To set the distribution of action perturbation to a value which increase during evaluation episode up to a certain maxvalue add the instruction:
-  nrange = 0.01 
+"nrange = 0.01" 
 in the file policy.py after the line 205
 and the instructions:
   self.nn.setnoiserange(nrange)
