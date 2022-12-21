@@ -11,7 +11,7 @@ Please replace the original file contained in the /evorobotpy2/lib folder with t
 
 To set the distribution of the perturbations affecting the motor states to a given fixed value add the instruction:
 
-self.nn.setnoiserange(value) 
+        self.nn.setnoiserange(value) 
 
 in the file ./bin/policy.py after line 200
  
