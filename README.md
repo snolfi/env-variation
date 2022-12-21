@@ -22,7 +22,7 @@ To set the distribution of action perturbation to a value which increase during 
 in the file policy.py after the line 205 and the instructions:
 
         self.nn.setnoiserange(nrange)
-	nrange += maxvalue/1000
+        nrange += maxvalue/1000
 	
 in the same file after line 206
  
